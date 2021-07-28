@@ -45,11 +45,11 @@ function calcGoalTime (eff) {
 function calcHour (eff) {
     let today = new Date();
     let hour = new Date(today.getTime()+(calcGoalSec(eff)*1000));
-    return hour;
+    return hour.getHours() +":"+ hour.getMinutes() +":" + hour.getSeconds() +" (" + hour.toDateString() +")";
 }
 
 function calcGoalSec (efficiency) {
-    return efficiency.quantity*efficiency.cycleTime/efficiency.cavityNumber;
+    return Math.round(efficiency.quantity*efficiency.cycleTime/efficiency.cavityNumber);
 }
 
 function calcGoalMin (efficiency) {
