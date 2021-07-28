@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Realizacja produkcji</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Oblicz realizację produkcji</h1>
+        <main>
+            
+            <section class="form">
+                <form>
+                    <input name="cycleTime" placeholder="Czas cyklu (s)" type="number" id="cycle" required>
+                    <input name="cavityNumber" placeholder="Rozmiar formy (liczba gniazd)" type="number" id="cavity" max="10" required>
+                    <input name="quantity" placeholder="Ilość do wyprodukowania" type="number" id="quantity">
+                    <button type="button" id="button">Policz</button>
+                </form>
+            </section>
+            <section>
+                <table>
+                    <tr>
+                        <td>Podany czas cyklu:</td>
+                        <td id="cycleRead"></td>
+                    </tr>
+                    <tr>
+                        <td>Wydajność (butelki/godz.):</td>
+                        <td id="hEfficency"></td>
+                    </tr>
+                    <tr>
+                        <td>Czas realizacji produkcji:</td>
+                        <td id="goalTime"></td>
+                    </tr>
+                    <tr>
+                        <td>Przewidywana godzina realizacji:</td>
+                        <td id="hour"></td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
