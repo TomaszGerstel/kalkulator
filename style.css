@@ -72,9 +72,9 @@ input, select {
     font-size: 1.3em;
 }
 
-option {
-    background-color: aqua;
-}
+/* option { */
+    /* background-color: aqua; */
+/* } */
 button {
 	background-color: black;
 	color: rgb(2, 174, 241);

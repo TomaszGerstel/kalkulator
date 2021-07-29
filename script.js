@@ -13,8 +13,8 @@ function showCalc(efficiency) {
     let perHour = document.getElementById("hEfficency");
     perHour.innerHTML = calcEfficency(efficiency);
 
-    let weight = document.getElementById("weightNeeded");
-    weight.innerHTML = calcWeightOfMaterial(efficiency);
+    // let weight = document.getElementById("weightNeeded");
+    // weight.innerHTML = calcWeightOfMaterial(efficiency);
 
     let goalTime = document.getElementById("goalTime");
     goalTime.innerHTML = calcGoalTime(efficiency);
@@ -38,7 +38,7 @@ function toCalculate() {
 
 function calcEfficency(eff) {
     let perHour = 3600/eff.cycleTime*eff.cavityNumber;
-    return perHour;
+    return Math.round(perHour);
 }
 
 function calcGoalTime (eff) {
@@ -65,6 +65,6 @@ function calcGoalHour (eff) {
     return Math.floor(calcGoalMin(eff)/60);
 }
 
-function calcWeightOfMaterial (eff){
-    return eff.quantity*eff.multiply/1000 + " kg";
-}
+// function calcWeightOfMaterial (eff){
+//     return eff.quantity...
+// }

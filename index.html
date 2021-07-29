@@ -13,9 +13,9 @@
             
             <section class="form">
                 <form>
-                    <label for="cycle">Podaj czas cyklu: </label>
+                    <label for="cycle">Podaj czas cyklu: </label></br>
                     <input name="cycleTime" placeholder="czas cyklu (s)" type="number" id="cycle" required>
-                    <label for="cavity">Podaj liczbę gniazd (rozmiar formy): </label>
+                    <label for="cavity">Podaj liczbę gniazd (rozmiar formy): </label></br>
                     <select name="cavityNumber" type="number" id="cavity" max="10" required>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -28,9 +28,9 @@
                         <option value="9">9</option>
                         <option value="10">10</option>
                     </select>
-                    <label for="quantity">Podaj ilość szt. produktu na jednostce (paleta/tacka): </label>
+                    <label for="quantity">Podaj ilość szt. produktu na jednostce (paleta/tacka): </label></br>
                     <input name="quantity" placeholder="ilość do wyprodukowania" type="number" id="quantity">
-                    <label for="multiply">Podaj ilość jednostek (palet/tacek): </label>
+                    <label for="multiply">Podaj ilość jednostek (palet/tacek): </label></br>
                     <input name="multiply" placeholder="ilość jednostek (X)" type="number" id="multiply" value="1">
                     <button type="button" id="button"><i class="fas fa-arrow-circle-down"></i> Oblicz <i class="fas fa-arrow-circle-down"></i></button>
                 </form>
@@ -45,10 +45,10 @@
                         <td>Wydajność (butelki/godz.):</td>
                         <td id="hEfficency"></td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>Waga materiału (kg):</td>
                         <td id="weightNeeded"></td>
-                    </tr>
+                    </tr> -->
                     <tr>
                         <td>Czas realizacji produkcji:</td>
                         <td id="goalTime"></td>
