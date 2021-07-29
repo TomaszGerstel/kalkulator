@@ -1,9 +1,10 @@
 class Efficiency {
-    constructor(cycleTime, cavityNumber, quantity, multiply) {
+    constructor(cycleTime, cavityNumber, quantity, multiply, grams) {
         this.cycleTime = cycleTime;
         this.cavityNumber = cavityNumber;
         this.quantity = quantity;
         this.multiply = multiply;
+        this.grams = grams;
     }
 }
 
@@ -13,8 +14,8 @@ function showCalc(efficiency) {
     let perHour = document.getElementById("hEfficency");
     perHour.innerHTML = calcEfficency(efficiency);
 
-    // let weight = document.getElementById("weightNeeded");
-    // weight.innerHTML = calcWeightOfMaterial(efficiency);
+    let weight = document.getElementById("weightNeeded");
+    weight.innerHTML = calcWeightOfMaterial(efficiency);
 
     let goalTime = document.getElementById("goalTime");
     goalTime.innerHTML = calcGoalTime(efficiency);
@@ -27,7 +28,8 @@ function toCalculate() {
         let cavity = document.getElementById("cavity").value;
         let quantity = document.getElementById("quantity").value;
         let mult = document.getElementById("multiply").value;
-        let efficiency = new Efficiency(time, cavity, quantity, mult);
+        let gr = document.getElementById("grams").value;
+        let efficiency = new Efficiency(time, cavity, quantity, mult, gr);
         showCalc(efficiency);
 }
 
@@ -65,6 +67,6 @@ function calcGoalHour (eff) {
     return Math.floor(calcGoalMin(eff)/60);
 }
 
-// function calcWeightOfMaterial (eff){
-//     return eff.quantity...
-// }
+function calcWeightOfMaterial (eff){
+    return eff.quantity*eff.grams/1000;
+}
