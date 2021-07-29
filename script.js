@@ -1,8 +1,9 @@
 class Efficiency {
-    constructor(cycleTime, cavityNumber, quantity) {
+    constructor(cycleTime, cavityNumber, quantity, multiply) {
         this.cycleTime = cycleTime;
         this.cavityNumber = cavityNumber;
         this.quantity = quantity;
+        this.multiply = multiply;
     }
 }
 
@@ -11,28 +12,32 @@ function showCalc(efficiency) {
     cycleRead.innerHTML = efficiency.cycleTime;
     let perHour = document.getElementById("hEfficency");
     perHour.innerHTML = calcEfficency(efficiency);
+
+    let weight = document.getElementById("weightNeeded");
+    weight.innerHTML = calcWeightOfMaterial(efficiency);
+
     let goalTime = document.getElementById("goalTime");
     goalTime.innerHTML = calcGoalTime(efficiency);
     let hour = document.getElementById("hour");
     hour.innerHTML = calcHour(efficiency);
-
 }
 
-function calculate() {
+function toCalculate() {
     let time = document.getElementById("cycle").value;
         let cavity = document.getElementById("cavity").value;
         let quantity = document.getElementById("quantity").value;
-        let efficiency = new Efficiency(time, cavity, quantity);
+        let mult = document.getElementById("multiply").value;
+        let efficiency = new Efficiency(time, cavity, quantity, mult);
         showCalc(efficiency);
 }
 
 (function registerButtonClick() {
     let addButton = document.getElementById("button");
-    addButton.onclick = calculate;
+    addButton.onclick = toCalculate;
 })();
 
-function calcEfficency(efficiency) {
-    let perHour = 3600/efficiency.cycleTime*efficiency.cavityNumber;
+function calcEfficency(eff) {
+    let perHour = 3600/eff.cycleTime*eff.cavityNumber;
     return perHour;
 }
 
@@ -48,14 +53,18 @@ function calcHour (eff) {
     return hour.getHours() +":"+ hour.getMinutes() +":" + hour.getSeconds() +" (" + hour.toDateString() +")";
 }
 
-function calcGoalSec (efficiency) {
-    return Math.round(efficiency.quantity*efficiency.cycleTime/efficiency.cavityNumber);
+function calcGoalSec (eff) {
+    return Math.round(eff.quantity*eff.cycleTime*eff.multiply/eff.cavityNumber);
 }
 
-function calcGoalMin (efficiency) {
-    return Math.floor(calcGoalSec(efficiency)/60);
+function calcGoalMin (eff) {
+    return Math.floor(calcGoalSec(eff)/60);
 }
 
-function calcGoalHour (efficiency) {
-    return Math.floor(calcGoalMin(efficiency)/60);
+function calcGoalHour (eff) {
+    return Math.floor(calcGoalMin(eff)/60);
+}
+
+function calcWeightOfMaterial (eff){
+    return eff.quantity*eff.multiply/1000 + " kg";
 }

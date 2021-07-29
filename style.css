@@ -1,9 +1,10 @@
 body {
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
 	padding: 0;
 	display: block;
-	/* max-width: 600px; */
+    /* max-width: 600px; */
+    background-color: aqua;
 }
 
 main, table {
@@ -14,6 +15,15 @@ main, table {
 
 thead > tr {
     background-color: lightgray;
+}
+
+label {
+    font-size: 1.3em;
+    font-weight: 600;  
+}
+
+h1 {
+    text-align: center;
 }
 
 table,
@@ -51,7 +61,7 @@ form {
     /* max-width: 600px; */
 }
 
-input {
+input, select {
     display: block;
     width: 100%;
     height: 80px;
@@ -60,6 +70,10 @@ input {
     padding: 15px;
     border: 1px solid black;
     font-size: 1.3em;
+}
+
+option {
+    background-color: aqua;
 }
 button {
 	background-color: black;
