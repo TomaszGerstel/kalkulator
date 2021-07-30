@@ -9,14 +9,15 @@
     </head>
     <body>
         <h1>Kalkulator realizacji produkcji</h1>
+        <hr>
         <main>
             
             <section class="form">
                 <form id="form">
                     <label for="cycle">Podaj czas cyklu: </label></br>
-                    <input name="cycleTime" placeholder="czas cyklu (s)" type="number" id="cycle" required>
+                    <input name="cycleTime" placeholder="czas cyklu (s)" type="number" id="cycle">
                     <label for="cavity">Podaj liczbę gniazd (rozmiar formy): </label></br>
-                    <select name="cavityNumber" type="number" id="cavity" max="10" required>
+                    <select name="cavityNumber" type="number" id="cavity">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -63,6 +64,7 @@
             </section>
             <button type="button" id="resetButton"><i class="fas fa-sync-alt"></i></i> Reset <i class="fas fa-sync-alt"></i></button>
         </main>
+        <footer>TG 2021</footer>
         <script src="script.js"></script>
     </body>
 </html>
