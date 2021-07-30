@@ -32,8 +32,8 @@ th, td {
     border: 2px solid black;
     /* border-collapse: collapse; */
     background-color: rgb(2, 174, 241);
-	box-shadow: 5px 5px 50px grey;
-	-moz-box-shadow: 5px 5px 50px grey;
+	/* box-shadow: 5px 5px 50px grey; */
+	/* -moz-box-shadow: 5px 5px 50px grey; */
 	-webkit-box-shadow: 5px 5px 50px grey;
 	table-layout: auto;
 
@@ -88,7 +88,7 @@ button {
 	border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    height: 80px;
+    height: 100px;
 }
 
 button:hover {

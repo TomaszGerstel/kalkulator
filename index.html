@@ -8,11 +8,11 @@
         <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     </head>
     <body>
-        <h1>Oblicz realizację produkcji</h1>
+        <h1>Kalkulator realizacji produkcji</h1>
         <main>
             
             <section class="form">
-                <form>
+                <form id="form">
                     <label for="cycle">Podaj czas cyklu: </label></br>
                     <input name="cycleTime" placeholder="czas cyklu (s)" type="number" id="cycle" required>
                     <label for="cavity">Podaj liczbę gniazd (rozmiar formy): </label></br>
@@ -28,9 +28,9 @@
                         <option value="9">9</option>
                         <option value="10">10</option>
                     </select>
-                    <label for="quantity">Podaj ilość szt. produktu na jednostce (paleta/tacka): </label></br>
+                    <label for="quantity">Podaj ilość szt. produktu na jednostce (paleta lub tacka): </label></br>
                     <input name="quantity" placeholder="ilość do wyprodukowania" type="number" id="quantity">
-                    <label for="multiply">Podaj ilość jednostek (palet/tacek): </label></br>
+                    <label for="multiply">Podaj ilość jednostek (palet lub tacek): </label></br>
                     <input name="multiply" placeholder="ilość jednostek (X)" type="number" id="multiply" value="1">
                     <label for="grams">Podaj wagę produktu: </label></br>
                     <input name="grams" placeholder="waga (g)" type="number" id="grams">
@@ -59,8 +59,9 @@
                         <td>Przewidywana godzina realizacji:</td>
                         <td id="hour"></td>
                     </tr>
-                </table>
+                </table>                
             </section>
+            <button type="button" id="resetButton"><i class="fas fa-sync-alt"></i></i> Reset <i class="fas fa-sync-alt"></i></button>
         </main>
         <script src="script.js"></script>
     </body>

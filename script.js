@@ -38,6 +38,11 @@ function toCalculate() {
     addButton.onclick = toCalculate;
 })();
 
+(function registerButtonReset() {
+    let addButton = document.getElementById("resetButton");
+    addButton.onclick = refresh;
+})();
+
 function calcEfficency(eff) {
     let perHour = 3600/eff.cycleTime*eff.cavityNumber;
     return Math.round(perHour);
@@ -69,4 +74,8 @@ function calcGoalHour (eff) {
 
 function calcWeightOfMaterial (eff){
     return eff.quantity*eff.grams/1000;
+}
+
+function refresh () {
+    window.location.reload();
 }
