@@ -35,11 +35,12 @@ th, td {
 	margin-top: 10px;
 	margin-bottom: 10px;
     font-weight: 600;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 td {
     height: 70px;
+    min-width: 250px;
 }
 
 form {
