@@ -2,7 +2,7 @@ body {
     margin: 0 auto;
 	padding: 0;   
     background: aqua;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 main, table {
@@ -50,7 +50,7 @@ form {
 
 input, select {
     display: block;
-    width: 100%;
+    width: 96%;
     height: 80px;
     background-color: rgb(2, 174, 241);
     font-weight: 600;
