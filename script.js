@@ -78,7 +78,7 @@ function calcGoalHour (eff) {
 }
 
 function calcWeightOfMaterial (eff){
-    return Math.round(eff.quantity*eff.grams*eff.multiply/10)/100;
+    return (eff.quantity*eff.grams*eff.multiply/1000).toPrecision(3);
 }
 
 function refresh () {
