@@ -1,11 +1,12 @@
 body {
     margin: 0 auto;
-	padding: 0;
-    background-color: aqua;
+	padding: 0;   
+    background: aqua;
+    font-size: 24px;
 }
 
 main, table {
-    width: 100%;
+    width: 900px;    
     margin: auto;
 }
 
@@ -26,7 +27,6 @@ tr,
 th, td {
     border: 2px solid black; 
     background-color: rgb(2, 174, 241);
-	-webkit-box-shadow: 5px 5px 50px grey;
 	table-layout: auto;
 	text-align: left;
 	margin-right: auto;

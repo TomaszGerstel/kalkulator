@@ -57,7 +57,12 @@ function calcGoalTime (eff) {
 function calcHour (eff) {
     let today = new Date();
     let hour = new Date(today.getTime()+(calcGoalSec(eff)*1000));
-    return hour.getHours() +":"+ hour.getMinutes() +":" + hour.getSeconds() +" (" + hour.toDateString() +")";
+    return hour.getHours() +":"+ timeFormat(hour.getMinutes()) +":" + timeFormat(hour.getSeconds()) +" (" + hour.toDateString() +")";
+}
+
+function timeFormat (time) {
+    if (time < 10) return "0"+time;
+    return time;
 }
 
 function calcGoalSec (eff) {
@@ -73,7 +78,7 @@ function calcGoalHour (eff) {
 }
 
 function calcWeightOfMaterial (eff){
-    return eff.quantity*eff.grams*eff.multiply/1000;
+    return Math.round(eff.quantity*eff.grams*eff.multiply/10)/100;
 }
 
 function refresh () {

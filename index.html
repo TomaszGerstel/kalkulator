@@ -14,9 +14,9 @@
             
             <section class="form">
                 <form id="form">
-                    <label for="cycle">Podaj czas cyklu: </label></br>
-                    <input name="cycleTime" placeholder="czas cyklu (s)" type="number" id="cycle">
-                    <label for="cavity">Podaj liczbę gniazd (rozmiar formy): </label></br>
+                    <label for="cycle">Podaj czas cyklu (s): </label></br>
+                    <input name="cycleTime" type="number" id="cycle">
+                    <label for="cavity">Podaj rozmiar formy (liczbę gniazd): </label></br>
                     <select name="cavityNumber" type="number" id="cavity">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -30,18 +30,18 @@
                         <option value="10">10</option>
                     </select>
                     <label for="quantity">Podaj ilość szt. produktu na jednostce (paleta lub tacka): </label></br>
-                    <input name="quantity" placeholder="ilość do wyprodukowania" type="number" id="quantity">
-                    <label for="multiply">Podaj ilość jednostek (palet lub tacek): </label></br>
-                    <input name="multiply" placeholder="ilość jednostek (X)" type="number" id="multiply" value="1">
-                    <label for="grams">Podaj wagę produktu: </label></br>
-                    <input name="grams" placeholder="waga (g)" type="number" id="grams">
+                    <input name="quantity" type="number" id="quantity">
+                    <label for="multiply">Przemnóż (podaj ilość jednostek - palet lub tacek): </label></br>
+                    <input name="multiply" type="number" id="multiply" value="1">
+                    <label for="grams">Podaj wagę produktu (g): </label></br>
+                    <input name="grams" type="number" id="grams">
                     <button type="button" id="button"><i class="fas fa-arrow-circle-down"></i> Oblicz <i class="fas fa-arrow-circle-down"></i></button>
                 </form>
             </section>
             <section>
                 <table>
                     <tr>
-                        <td>Podany czas cyklu:</td>
+                        <td>Podany czas cyklu (s):</td>
                         <td id="cycleRead"></td>
                     </tr>
                     <tr>
