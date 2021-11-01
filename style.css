@@ -46,19 +46,19 @@ td {
 form {
     display: inline-block;
     width: 100%;
-    font-size: 1.6em;
+    font-size: 1.5em;
 }
 
 input, select {
     display: block;
     width: 96%;
-    height: 80px;
+    height: 75px;
     background-color: rgb(2, 174, 241);
     font-weight: 600;
     padding: 15px;
     margin-bottom: 10px;
     border: 1px solid black;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 button {
